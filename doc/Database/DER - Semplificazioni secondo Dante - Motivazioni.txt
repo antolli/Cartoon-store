@@ -1,0 +1,43 @@
+Riporto quanto riferito da Dante sul DER, a partire dalla sua frase di esordio, che ha detto bonariamente nel momento in cui l'ha visto:
+"Io ho fatto di tutto per aiutarvi (non solo voi: tutti i gruppi) affinché aveste vita facile nel portare avanti un progetto che fosse allo stesso tempo sia facilissimo che non fosse proprio banale, cioè che fosse anche in grado di dar un minimo di senso al progetto del corso, ovvero che andasse bene a Pighin, e voi però vi state complicando molto di più la vita laddove non serve...!"
+
+Questa frase, che ripeto va letta con un tono bonario e col sorriso, così come me l'ha detta lui, è stata poi in realtà ripetuta anche per i Diagrammi di Casi d'Uso.
+
+Sul DER ha aggiunto: "Non è sbagliato quello che avete fatto, ma 
+questo DER ha la valenza di una "Bomba atomica", in realtà vi viene
+richiesto molto meno... a parte alcuni campi come il "ruolo", comunque va bene e secondo me Pighin qualsiasi grafico ve lo fa passare, però potevate tenere una linea molto più semplice. Al di là che forse avete usato un qualche tool automatico che vi ha creato le tabelle intermedie di relazione... ma un DER descrittivo e non così tecnico dovrebber rappresentare le relazioni con delle frecce e non con tabelle intermedie..."
+
+Io a quel punto gli ho chiesto: "io terrei questo che abbiamo perché mi piace e perché credo risponda in pieno a quelle che sono le richieste... l'unica mia paura è che Pighin ci possa dire di aver lavorato più di quanto richiedevano i requisiti specificati dal committente, e quindiabbiamo aumentato inutilmente i costi? Dobbiamo proprio cambiarlo???"
+
+Dante ha fatto una faccia perplessa e poi ha detto: 
+"Ora... dipende da come la vede Pighin... magari a lui potrebbe andargli bene lo stesso.. "
+
+e Dante continua: "Ad ogni modo questo (la suggestion) non serve..."... 
+
+E da qua cominciano le modifiche che poi ho segnato in una immagine copia del nostro originale 
+
+
+LE MODIFICHE AL DER NEL DETTAGLIO:
+
+1. Entità SUGGESTION: La suggestion non l'avrebbe fatta proprio e, come aveva già detto, è meglio realizzarla attraverso uno stato, gestito con un flag, della prenotazione (reserve); il flag dovrebbe avere i valori: 0: "fumetto suggerito";
+1: "prenotazione effettiva";
+
+2. Entità RESERVE: Va conseguentemente aggiunto il flag booleano "stato della prenotazione";
+
+3. Entità SALE e SALE ITEM: queste tabelle sono da cancellare perché le vendite non sono da gestire: non sono proprio richieste da requisiti;
+Con "da gestire" si intende che non se ne deve tenere traccia; non che non sia possibile farle. Quindi compariranno da qualche altra parte e non nel DER.
+
+4. Entità LOGIN, ADMIN e PROFILE: non servirebbero.... basterebbe aggiungere i campi che esse portano, all'interno dell'entità CUSTOMER.
+
+5. Entità CUSTOMER: vanno aggiunti i campi "password", "username" e "tipo utente"; quest ultimo da usarsi come un flag a valori multipli
+0: proprietario;
+1: commesso;
+2: cliente registrato;
+3: cliente non registrato;
+(e qui mi chiedo io...; "tipi diversi di utente con diverse potenzialità" ----->>> "più campi per i diritti?"; questa domanda non l'ho fatta a Dante perché mi è venuta in mente dopo)
+
+6: Entità COMICS AUTHOR: Va aggiunto un campo "ruolo" che dica che tipo di artista è l'autore in questione (scrittore, disegnatore, ecc...);
+
+7: Entità PHONE: questa va' tenuta così com'è, solo se "El Pigo" vuole che un cliente possa fornire più di un numero di telefono, che a detta di Dante potrebbe essere eccessivo per il tipo di attività/progetto, quindi per lui quell'entità non servirebbe
+(E io aggiungo: Se lo facciamo per i telefoni, dovremmo farlo anche per le e-mail; io stesso ne ho 5.... XD )
+

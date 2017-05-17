@@ -1,0 +1,15 @@
+1. Un Cliente visitatore (non registrato) visita la fumetteria, o da web o in negozio;
+2. Può decidere di creare un nuovo account;
+
+
+1. Il Cliente registrato accede alla fumetteria, o da web o in negozio(se da web effettua il login);
+2. Può decidere di uscire (logout);
+
+
+1. Il Cliente registrato accede alla fumetteria, o da web o in negozio (se da web effettua il login);
+2. Può decidere di modificare il proprio profilo;
+
+
+1. Il Cliente registrato accede alla fumetteria, o da web o in negozio (se da web effettua il login);
+2. Può decidere di cancellare il proprio profilo (disiscriversi);
+  
